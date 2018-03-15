@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClasses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any, Any" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-zw-Hxk">
-                                <rect key="frame" x="107" y="178" width="200" height="400"/>
+                                <rect key="frame" x="87.5" y="143.5" width="200" height="400"/>
                                 <color key="backgroundColor" red="0.55045343367832977" green="1" blue="0.19458531770427778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Fa6-I0-Wdn"/>
@@ -40,20 +40,70 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-b6-m3n">
-                                <rect key="frame" x="57" y="557" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-b6-m3n">
+                                <rect key="frame" x="35.5" y="575" width="44" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.67693908329999997" blue="0.025902560910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="IeH-ux-Gle"/>
+                                    <constraint firstAttribute="height" constant="44" id="fr9-KS-bpt"/>
+                                    <constraint firstAttribute="width" constant="44" id="gA6-p5-pgr"/>
+                                    <constraint firstAttribute="width" constant="88" id="r6h-Pj-e3X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IeH-ux-Gle"/>
+                                        <exclude reference="fr9-KS-bpt"/>
+                                        <exclude reference="gA6-p5-pgr"/>
+                                        <exclude reference="r6h-Pj-e3X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="fr9-KS-bpt"/>
+                                        <include reference="gA6-p5-pgr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="IeH-ux-Gle"/>
+                                        <include reference="r6h-Pj-e3X"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59092850892107696" green="1" blue="0.68657609187052615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wfp-zw-Hxk" firstAttribute="leading" secondItem="W9x-b6-m3n" secondAttribute="trailing" constant="8" id="Ky6-qG-NFJ">
+                                <variation key="heightClass=compact" constant="-4"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-280"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-296"/>
+                            </constraint>
                             <constraint firstItem="Wfp-zw-Hxk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YUr-93-lbP"/>
                             <constraint firstItem="Wfp-zw-Hxk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fWz-qf-z8b"/>
+                            <constraint firstItem="W9x-b6-m3n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="q7C-Aw-0ez">
+                                <variation key="widthClass=compact" constant="472"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="58"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="555"/>
+                            </constraint>
+                            <constraint firstItem="Wfp-zw-Hxk" firstAttribute="top" secondItem="W9x-b6-m3n" secondAttribute="bottom" constant="8" id="u1u-3s-O6x">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-485"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="u1u-3s-O6x"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="u1u-3s-O6x"/>
+                                <exclude reference="q7C-Aw-0ez"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
